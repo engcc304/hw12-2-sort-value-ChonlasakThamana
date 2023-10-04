@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Set 1",
+      "setup": "g++ -o a.out ./Homework/HW12/hw12-2-sort-value.cpp",
+      "run": "./a.out",
+      "input": "Yorn\r\n21.42\r\nOmen\r\n56.00\r\nAlice\r\n80.75\r\nViolet\r\n67.76\r\n",
+      "output": "Alice Violet Omen Yorn\r\n80.75 67.76 56.00 21.42",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Set 2",
+      "setup": "g++ -o a.out ./Homework/HW12/hw12-2-sort-value.cpp",
+      "run": "./a.out",
+      "input": "Payna\r\n77.77\r\nZanis\r\n88.88\r\nLubu\r\n66.66\r\nKrixi\r\n99.99\r\n",
+      "output": "Krixi Zanis Payna Lubu\r\n99.99 88.88 77.77 66.66",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
