@@ -59,4 +59,52 @@
         Krixi Zanis Payna Lubu
         99.99 88.88 77.77 66.66
 
-*/
+*/#include <stdio.h>
+#include <string.h>
+
+// สร้างโครงสร้างข้อมูล Student
+struct Student {
+    char name[50];
+    int age;
+    char gender;
+    float score;
+};
+
+int main() {
+    struct Student students[4]; // สร้างอาร์เรย์ของ struct Student มี 4 สมาชิก
+
+    // รับข้อมูลสำหรับ Student A, B, C, และ D
+    for (int i = 0; i < 4; i++) {
+        printf("Student %c\n", 'A' + i);
+        printf("Name : ");
+        scanf("%s", students[i].name);
+        printf("Score : ");
+        scanf("%f", &students[i].score);
+        printf("\n");
+    }
+
+    // เรียงลำดับข้อมูลตามคะแนนสะสมจากมากไปน้อย
+    for (int i = 0; i < 4 - 1; i++) {
+        for (int j = 0; j < 4 - i - 1; j++) {
+            if (students[j].score < students[j + 1].score) {
+                // สลับข้อมูลของนักเรียน j และ j+1
+                struct Student temp = students[j];
+                students[j] = students[j + 1];
+                students[j + 1] = temp;
+            }
+        }
+    }
+
+    // แสดงผลลัพธ์
+    printf("Output:\n");
+    for (int i = 0; i < 4; i++) {
+        printf("%s ", students[i].name);
+    }
+    printf("\n");
+    for (int i = 0; i < 4; i++) {
+        printf("%.2f ", students[i].score);
+    }
+    printf("\n");
+
+    return 0;
+}
