@@ -1,5 +1,5 @@
 /*
-    สร้าง Struct เพื่อเก็บข้อมูลของคน 2 คน โดยเก็บข้อมูล ชื่อ , อายุ , เพศ และคะแนนสะสม และแสดงผลออกมาบนหน้าจอ
+    สร้าง Struct เพื่อเก็บข้อมูลของคน 4 คน โดยเก็บข้อมูล ชื่อ , อายุ , เพศ และคะแนนสะสม และแสดงผลออกมาบนหน้าจอ
     
     Test case:
         Student A
@@ -59,8 +59,9 @@
         Krixi Zanis Payna Lubu
         99.99 88.88 77.77 66.66
 
-*/#include <stdio.h>
-#include <string.h>
+*/
+  #include <stdio.h>
+  #include <string.h>
 
 // สร้างโครงสร้างข้อมูล Student
 struct Student {
